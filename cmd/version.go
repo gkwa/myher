@@ -2,9 +2,10 @@ package cmd
 
 import (
 	"fmt"
-	
-	"github.com/gkwa/myher/version"
+
 	"github.com/spf13/cobra"
+
+	"github.com/gkwa/myher/version"
 )
 
 var versionCmd = &cobra.Command{
