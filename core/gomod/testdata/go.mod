@@ -6,7 +6,7 @@ require (
    github.com/fatih/color v1.15.0
    github.com/go-git/go-git/v5 v5.11.0
    github.com/go-logr/logr v1.3.0
-   github.com/spf13/cobra v1.8.0
+   github.com/spf13/cobra v1.8.1
 )
 
 require (
