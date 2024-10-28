@@ -1,3 +1,4 @@
+// core/gomod/parser_test.go
 package gomod
 
 import (
@@ -21,10 +22,10 @@ func TestParser_Parse(t *testing.T) {
 		Module:    "github.com/gkwa/myher",
 		GoVersion: "1.21",
 		DirectDeps: []Dependency{
-			{Path: "github.com/fatih/color", Version: "v1.15.0"},
+			{Path: "github.com/fatih/color", Version: "v1.18.0"},
 			{Path: "github.com/go-git/go-git/v5", Version: "v5.11.0"},
 			{Path: "github.com/go-logr/logr", Version: "v1.3.0"},
-			{Path: "github.com/spf13/cobra", Version: "v1.8.0"},
+			{Path: "github.com/spf13/cobra", Version: "v1.8.1"},
 		},
 	}
 
