@@ -1,4 +1,3 @@
-// core/gomod/parser_test.go
 package gomod
 
 import (
