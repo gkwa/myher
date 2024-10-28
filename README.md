@@ -38,7 +38,7 @@ myher version
 
 ```bash
 # Basic Commands
-myher parse                               # Show current dependencies
+myher parse                              # Show current dependencies
 myher downgrade                          # Generate downgrade commands
 myher version                            # Show version info
 
