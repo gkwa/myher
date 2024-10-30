@@ -8,6 +8,9 @@
   "prConcurrentLimit": 0,
   "packageRules": [
     {
+      "paths": [
+        "**/testdata/**"
+      ],
       "matchUpdateTypes": [
         "minor",
         "patch",
