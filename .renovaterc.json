@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "ignorePaths": [
+    "**/testdata/**"
+  ],
   "extends": [
     "config:recommended",
     ":dependencyDashboard"
@@ -8,9 +11,6 @@
   "prConcurrentLimit": 0,
   "packageRules": [
     {
-      "paths": [
-        "**/testdata/**"
-      ],
       "matchUpdateTypes": [
         "minor",
         "patch",
