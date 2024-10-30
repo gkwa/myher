@@ -125,3 +125,4 @@ To complete the testing pipeline, you'll need:
 - Branch protection rules (optional)
 
 The tool works best as part of an automated dependency update workflow but can also be used standalone to generate downgrade commands.
+
