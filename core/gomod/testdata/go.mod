@@ -5,7 +5,7 @@ go 1.21
 require (
    github.com/fatih/color v1.18.0
    github.com/go-git/go-git/v5 v5.11.0
-   github.com/go-logr/logr v1.3.0
+   github.com/go-logr/logr v1.4.2
    github.com/spf13/cobra v1.8.1
 )
 
