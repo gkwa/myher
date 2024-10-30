@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "ignorePaths": [
-    "**/testdata/**"
+    "**/testdata/go.mod"
   ],
   "extends": [
     "config:recommended",
