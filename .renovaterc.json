@@ -4,16 +4,12 @@
   "ignorePaths": ["**/testdata/go.mod"],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
+  "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"],
   "packageRules": [
     {
       "automerge": true,
-      "automergeStrategy": "squash",
-      "automergeType": "pr",
-      "ignoreTests": false,
-      "recreateWhen": "always",
-      "matchDepTypes": ["*"]
+      "recreateWhen": "always"
     }
   ],
-  "platformAutomerge": true,
-  "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"]
+  "platformAutomerge": true
 }
