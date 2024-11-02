@@ -33,11 +33,13 @@ func (m *mockVersionFinder) FindVersions(deps []Dependency, concurrency int) (ma
 	return m.versions, m.err
 }
 
-func (m *mockVersionFinder) GetSecondLatest(versions []string) string {
-	if len(versions) < 2 {
-		return ""
+func (m *mockVersionFinder) GetPreviousVersion(current string, versions []string) string {
+	for i := len(versions) - 1; i > 0; i-- {
+		if versions[i] == current {
+			return versions[i-1]
+		}
 	}
-	return versions[len(versions)-2]
+	return ""
 }
 
 func TestService_GenerateDowngradeCommands(t *testing.T) {
@@ -47,8 +49,8 @@ func TestService_GenerateDowngradeCommands(t *testing.T) {
 module test
 go 1.21
 require (
-   github.com/pkg/errors v0.9.1
-   github.com/stretchr/testify v1.8.4
+  github.com/pkg/errors v0.9.1
+  github.com/stretchr/testify v1.8.4
 )`)
 
 	mockVersions := map[string][]string{

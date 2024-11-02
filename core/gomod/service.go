@@ -84,8 +84,8 @@ func (s *ModuleService) GenerateDowngradeCommands(concurrency int, alternatingCo
 			continue
 		}
 
-		if secondLatest := s.versions.GetSecondLatest(versions); secondLatest != "" {
-			version := strings.TrimPrefix(secondLatest, "v")
+		if previousVersion := s.versions.GetPreviousVersion(dep.Version, versions); previousVersion != "" {
+			version := strings.TrimPrefix(previousVersion, "v")
 			cmd := fmt.Sprintf("go get %s@v%s", dep.Path, version)
 			if alternatingComments && i%2 == 1 {
 				cmd = "# " + cmd

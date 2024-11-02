@@ -9,7 +9,7 @@ import (
 
 type VersionFinder interface {
 	FindVersions(modules []Dependency, concurrency int) (map[string][]string, error)
-	GetSecondLatest(versions []string) string
+	GetPreviousVersion(current string, versions []string) string
 }
 
 type GoListVersionFinder struct{}
@@ -69,9 +69,11 @@ func (f *GoListVersionFinder) FindVersions(modules []Dependency, concurrency int
 	return results, nil
 }
 
-func (f *GoListVersionFinder) GetSecondLatest(versions []string) string {
-	if len(versions) < 2 {
-		return ""
+func (f *GoListVersionFinder) GetPreviousVersion(current string, versions []string) string {
+	for i := len(versions) - 1; i > 0; i-- {
+		if versions[i] == current {
+			return versions[i-1]
+		}
 	}
-	return versions[len(versions)-2]
+	return ""
 }
