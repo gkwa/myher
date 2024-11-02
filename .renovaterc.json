@@ -6,7 +6,6 @@
   "prConcurrentLimit": 0,
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "automergeStrategy": "squash",
       "automergeType": "pr",
