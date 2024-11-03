@@ -7,6 +7,7 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest", "replacement"],
       "automerge": true,
+      "automergeStrategy": "merge-commit",
       "recreateWhen": "always"
     }
   ],
