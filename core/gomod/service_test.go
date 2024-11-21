@@ -77,8 +77,8 @@ require (
 			concurrency: 5,
 			alternating: false,
 			want: []string{
-				"go get github.com/pkg/errors@v0.9.0",
-				"go get github.com/stretchr/testify@v1.8.3",
+				"go get github.com/pkg/errors@v0.9.0 && go mod tidy",
+				"go get github.com/stretchr/testify@v1.8.3 && go mod tidy",
 			},
 		},
 		{
@@ -86,8 +86,8 @@ require (
 			concurrency: 5,
 			alternating: true,
 			want: []string{
-				"go get github.com/pkg/errors@v0.9.0",
-				"# go get github.com/stretchr/testify@v1.8.3",
+				"go get github.com/pkg/errors@v0.9.0 && go mod tidy",
+				"# go get github.com/stretchr/testify@v1.8.3 && go mod tidy",
 			},
 		},
 	}
