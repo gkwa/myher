@@ -12,7 +12,7 @@ require (
 	github.com/rs/zerolog v1.34.0
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.20.1
-	golang.org/x/mod v0.24.0
+	golang.org/x/mod v0.25.0
 	sigs.k8s.io/controller-runtime v0.20.4
 )
 
