@@ -14,7 +14,7 @@ require (
 	github.com/rs/zerolog v1.34.0
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
-	golang.org/x/mod v0.32.0
+	golang.org/x/mod v0.33.0
 	sigs.k8s.io/controller-runtime v0.23.1
 )
 
